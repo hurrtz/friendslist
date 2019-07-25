@@ -11,6 +11,7 @@ import {
   starFriend,
   nextPage,
   previousPage,
+  setSex,
 } from './actions';
 import styles from './styles.css';
 
@@ -25,12 +26,14 @@ class FriendListApp extends PureComponent {
       previousPage,
       hasNext,
       hasPrevious,
+      setSex,
     } = this.props;
 
     const friendsListActions = {
       addFriend,
       deleteFriend,
       starFriend,
+      setSex,
     };
 
     return (
@@ -61,5 +64,6 @@ export default connect(
     starFriend,
     nextPage,
     previousPage,
+    setSex,
   },
 )(FriendListApp);

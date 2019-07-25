@@ -4,6 +4,7 @@ import {
   STAR_FRIEND,
   NEXT_PAGE,
   PREVIOUS_PAGE,
+  SET_SEX,
 } from './constants';
 
 const initialState = {
@@ -13,14 +14,17 @@ const initialState = {
     {
       name: 'Theodore Roosevelt',
       starred: true,
+      sex: 'male',
     },
     {
       name: 'Abraham Lincoln',
       starred: false,
+      sex: 'male',
     },
     {
       name: 'George Washington',
       starred: false,
+      sex: 'male',
     },
   ],
 };
@@ -62,6 +66,16 @@ export default function friends(state = initialState, action) {
 
     case PREVIOUS_PAGE:
       return { ...state, page: Math.max((state.page -= 1), 1) };
+
+    case SET_SEX:
+      return {
+        ...state,
+        friendsById: state.friendsById.map((friend, index) =>
+          index === action.payload.id
+            ? { ...friend, sex: action.payload.sex }
+            : friend,
+        ),
+      };
 
     default:
       return state;

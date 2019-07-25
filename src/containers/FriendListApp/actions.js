@@ -4,6 +4,7 @@ import {
   STAR_FRIEND,
   NEXT_PAGE,
   PREVIOUS_PAGE,
+  SET_SEX,
 } from './constants';
 
 export function addFriend(name) {
@@ -33,4 +34,8 @@ export function nextPage() {
 
 export function previousPage() {
   return { type: PREVIOUS_PAGE };
+}
+
+export function setSex({ id, sex }) {
+  return { type: SET_SEX, payload: { id, sex } };
 }

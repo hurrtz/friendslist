@@ -18,6 +18,7 @@ class FriendList extends PureComponent {
               id={index}
               name={friend.name}
               starred={friend.starred}
+              sex={friend.sex}
               {...actions}
             />
           );
