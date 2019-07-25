@@ -3,19 +3,31 @@ import { connect } from 'react-redux';
 
 import { FriendList, AddFriendInput, Pagination } from '../../components';
 
-import { addFriend, deleteFriend, starFriend } from './actions';
+import { getFriends, hasNextFriends, hasPreviousFriends } from './selectors';
+
+import {
+  addFriend,
+  deleteFriend,
+  starFriend,
+  nextPage,
+  previousPage,
+} from './actions';
 import styles from './styles.css';
 
 class FriendListApp extends PureComponent {
   render() {
     const {
-      friendlist: { friendsById },
+      friends,
       addFriend,
       deleteFriend,
       starFriend,
+      nextPage,
+      previousPage,
+      hasNext,
+      hasPrevious,
     } = this.props;
 
-    const actions = {
+    const friendsListActions = {
       addFriend,
       deleteFriend,
       starFriend,
@@ -24,17 +36,22 @@ class FriendListApp extends PureComponent {
     return (
       <div className={styles.friendListApp}>
         <h1>The FriendList</h1>
-        <AddFriendInput addFriend={actions.addFriend} />
-        <FriendList friends={friendsById} actions={actions} />
-        <Pagination />
+        <AddFriendInput addFriend={addFriend} />
+        <FriendList friends={friends} actions={friendsListActions} />
+        <Pagination
+          goNext={hasNext && nextPage}
+          goBack={hasPrevious && previousPage}
+        />
       </div>
     );
   }
 }
 
-function mapStateToProps(state) {
-  return state;
-}
+const mapStateToProps = state => ({
+  friends: getFriends(state),
+  hasNext: hasNextFriends(state),
+  hasPrevious: hasPreviousFriends(state),
+});
 
 export default connect(
   mapStateToProps,
@@ -42,5 +59,7 @@ export default connect(
     addFriend,
     deleteFriend,
     starFriend,
+    nextPage,
+    previousPage,
   },
 )(FriendListApp);

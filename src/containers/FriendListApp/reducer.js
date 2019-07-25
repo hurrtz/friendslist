@@ -1,6 +1,14 @@
-import { ADD_FRIEND, DELETE_FRIEND, STAR_FRIEND } from './constants';
+import {
+  ADD_FRIEND,
+  DELETE_FRIEND,
+  STAR_FRIEND,
+  NEXT_PAGE,
+  PREVIOUS_PAGE,
+} from './constants';
 
 const initialState = {
+  friendsPerPage: 2,
+  page: 1,
   friendsById: [
     {
       name: 'Theodore Roosevelt',
@@ -48,6 +56,12 @@ export default function friends(state = initialState, action) {
         friendsById: friends,
       };
     }
+
+    case NEXT_PAGE:
+      return { ...state, page: (state.page += 1) };
+
+    case PREVIOUS_PAGE:
+      return { ...state, page: Math.max((state.page -= 1), 1) };
 
     default:
       return state;

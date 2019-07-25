@@ -1,4 +1,10 @@
-import { ADD_FRIEND, DELETE_FRIEND, STAR_FRIEND } from './constants';
+import {
+  ADD_FRIEND,
+  DELETE_FRIEND,
+  STAR_FRIEND,
+  NEXT_PAGE,
+  PREVIOUS_PAGE,
+} from './constants';
 
 export function addFriend(name) {
   return {
@@ -19,4 +25,12 @@ export function starFriend(id) {
     type: STAR_FRIEND,
     id,
   };
+}
+
+export function nextPage() {
+  return { type: NEXT_PAGE };
+}
+
+export function previousPage() {
+  return { type: PREVIOUS_PAGE };
 }
