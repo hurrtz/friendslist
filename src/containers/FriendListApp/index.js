@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 
-import { FriendList, AddFriendInput } from '../../components';
+import { FriendList, AddFriendInput, Pagination } from '../../components';
 
 import { addFriend, deleteFriend, starFriend } from './actions';
 import styles from './styles.css';
@@ -26,6 +26,7 @@ class FriendListApp extends PureComponent {
         <h1>The FriendList</h1>
         <AddFriendInput addFriend={actions.addFriend} />
         <FriendList friends={friendsById} actions={actions} />
+        <Pagination />
       </div>
     );
   }
