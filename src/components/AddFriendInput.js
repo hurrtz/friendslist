@@ -3,8 +3,7 @@ import classnames from 'classnames';
 import styles from './AddFriendInput.css';
 
 class AddFriendInput extends Component {
-
-  render () {
+  render() {
     return (
       <input
         type="text"
@@ -13,33 +12,33 @@ class AddFriendInput extends Component {
         placeholder="Type the name of a friend"
         value={this.state.name}
         onChange={this.handleChange.bind(this)}
-        onKeyDown={this.handleSubmit.bind(this)} />
+        onKeyDown={this.handleSubmit.bind(this)}
+      />
     );
   }
 
-  constructor (props, context) {
+  constructor(props, context) {
     super(props, context);
     this.state = {
       name: this.props.name || '',
     };
   }
 
-  handleChange (e) {
+  handleChange(e) {
     this.setState({ name: e.target.value });
   }
 
-  handleSubmit (e) {
+  handleSubmit(e) {
     const name = e.target.value.trim();
     if (e.which === 13) {
       this.props.addFriend(name);
       this.setState({ name: '' });
     }
   }
-
 }
 
 AddFriendInput.propTypes = {
-  addFriend: PropTypes.func.isRequired
+  addFriend: PropTypes.func.isRequired,
 };
 
-export default AddFriendInput
+export default AddFriendInput;

@@ -4,17 +4,17 @@ const initialState = {
   friendsById: [
     {
       name: 'Theodore Roosevelt',
-      starred: true
+      starred: true,
     },
     {
       name: 'Abraham Lincoln',
-      starred: false
+      starred: false,
     },
     {
       name: 'George Washington',
-      starred: false
-    }
-  ]
+      starred: false,
+    },
+  ],
 };
 
 export default function friends(state = initialState, action) {
@@ -25,14 +25,16 @@ export default function friends(state = initialState, action) {
         friendsById: [
           ...state.friendsById,
           {
-            name: action.name
-          }
+            name: action.name,
+          },
         ],
       };
     case types.DELETE_FRIEND:
       return {
         ...state,
-        friendsById: state.friendsById.filter((item, index) => index !== action.id)
+        friendsById: state.friendsById.filter(
+          (item, index) => index !== action.id,
+        ),
       };
     case types.STAR_FRIEND:
       let friends = [...state.friendsById];
@@ -40,7 +42,7 @@ export default function friends(state = initialState, action) {
       friend.starred = !friend.starred;
       return {
         ...state,
-        friendsById: friends
+        friendsById: friends,
       };
 
     default:
