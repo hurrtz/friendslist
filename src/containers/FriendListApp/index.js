@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 
 import { FriendList, AddFriendInput } from '../../components';
@@ -6,7 +6,7 @@ import { FriendList, AddFriendInput } from '../../components';
 import { addFriend, deleteFriend, starFriend } from './actions';
 import styles from './styles.css';
 
-class FriendListApp extends Component {
+class FriendListApp extends PureComponent {
   render() {
     const {
       friendlist: { friendsById },

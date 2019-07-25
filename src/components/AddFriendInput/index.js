@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
 import styles from './styles.css';
 
-class AddFriendInput extends Component {
+class AddFriendInput extends PureComponent {
   constructor(props, context) {
     super(props, context);
 

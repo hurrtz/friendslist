@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
 import styles from './styles.css';
 
-class FriendListItem extends Component {
+class FriendListItem extends PureComponent {
   render() {
     const { name, starFriend, starred, id, deleteFriend } = this.props;
 

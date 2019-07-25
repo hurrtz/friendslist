@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { combineReducers, createStore } from 'redux';
 import { Provider } from 'react-redux';
 
@@ -11,7 +11,7 @@ const store = createStore(
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 );
 
-export default class App extends Component {
+class App extends PureComponent {
   render() {
     return (
       <div>
@@ -22,3 +22,5 @@ export default class App extends Component {
     );
   }
 }
+
+export default App;

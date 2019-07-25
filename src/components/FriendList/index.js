@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import FriendListItem from '../FriendListItem';
 
 import styles from './styles.css';
 
-class FriendList extends Component {
+class FriendList extends PureComponent {
   render() {
     const { friends, actions } = this.props;
 
