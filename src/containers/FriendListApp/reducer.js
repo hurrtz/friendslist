@@ -1,3 +1,4 @@
+import { v4 as uuid } from 'uuid';
 import {
   ADD_FRIEND,
   DELETE_FRIEND,
@@ -15,16 +16,19 @@ const initialState = {
       name: 'Theodore Roosevelt',
       starred: true,
       sex: 'male',
+      id: uuid(),
     },
     {
       name: 'Abraham Lincoln',
       starred: false,
       sex: 'male',
+      id: uuid(),
     },
     {
       name: 'George Washington',
       starred: false,
       sex: 'male',
+      id: uuid(),
     },
   ],
 };
@@ -38,6 +42,7 @@ export default function friends(state = initialState, action) {
           ...state.friendsById,
           {
             name: action.name,
+            id: uuid(),
           },
         ],
       };

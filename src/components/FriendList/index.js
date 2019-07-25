@@ -14,7 +14,7 @@ class FriendList extends PureComponent {
         {friends.map((friend, index) => {
           return (
             <FriendListItem
-              key={index}
+              key={friend.id}
               id={index}
               name={friend.name}
               starred={friend.starred}
