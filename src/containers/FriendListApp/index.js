@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
-import styles from './FriendListApp.css';
 import { connect } from 'react-redux';
 
-import { addFriend, deleteFriend, starFriend } from '../actions/FriendsActions';
-import { FriendList, AddFriendInput } from '../components';
+import { FriendList, AddFriendInput } from '../../components';
+
+import { addFriend, deleteFriend, starFriend } from './actions';
+import styles from './styles.css';
 
 class FriendListApp extends Component {
   render() {
     const {
       friendlist: { friendsById },
+      addFriend,
+      deleteFriend,
+      starFriend,
     } = this.props;
 
     const actions = {
-      addFriend: this.props.addFriend,
-      deleteFriend: this.props.deleteFriend,
-      starFriend: this.props.starFriend,
+      addFriend,
+      deleteFriend,
+      starFriend,
     };
 
     return (

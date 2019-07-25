@@ -1,4 +1,4 @@
-import * as types from '../constants/ActionTypes';
+import { ADD_FRIEND, DELETE_FRIEND, STAR_FRIEND } from './constants';
 
 const initialState = {
   friendsById: [
@@ -19,7 +19,7 @@ const initialState = {
 
 export default function friends(state = initialState, action) {
   switch (action.type) {
-    case types.ADD_FRIEND:
+    case ADD_FRIEND:
       return {
         ...state,
         friendsById: [
@@ -29,21 +29,25 @@ export default function friends(state = initialState, action) {
           },
         ],
       };
-    case types.DELETE_FRIEND:
+
+    case DELETE_FRIEND:
       return {
         ...state,
         friendsById: state.friendsById.filter(
           (item, index) => index !== action.id,
         ),
       };
-    case types.STAR_FRIEND:
-      let friends = [...state.friendsById];
-      let friend = friends.find((item, index) => index === action.id);
+
+    case STAR_FRIEND: {
+      const friends = [...state.friendsById];
+      const friend = friends.find((item, index) => index === action.id);
       friend.starred = !friend.starred;
+
       return {
         ...state,
         friendsById: friends,
       };
+    }
 
     default:
       return state;

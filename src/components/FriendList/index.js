@@ -1,19 +1,23 @@
 import React, { Component, PropTypes } from 'react';
-import styles from './FriendList.css';
-import FriendListItem from './FriendListItem';
+
+import FriendListItem from '../FriendListItem';
+
+import styles from './styles.css';
 
 class FriendList extends Component {
   render() {
+    const { friends, actions } = this.props;
+
     return (
       <ul className={styles.friendList}>
-        {this.props.friends.map((friend, index) => {
+        {friends.map((friend, index) => {
           return (
             <FriendListItem
               key={index}
               id={index}
               name={friend.name}
               starred={friend.starred}
-              {...this.props.actions}
+              {...actions}
             />
           );
         })}
