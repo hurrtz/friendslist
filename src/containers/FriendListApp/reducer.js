@@ -1,4 +1,3 @@
-import { v4 as uuid } from 'uuid';
 import {
   ADD_FRIEND,
   DELETE_FRIEND,
@@ -8,7 +7,7 @@ import {
   SET_SEX,
 } from './constants';
 
-const initialState = {
+export const initialState = {
   friendsPerPage: 2,
   page: 1,
   friendsById: [
@@ -16,24 +15,21 @@ const initialState = {
       name: 'Theodore Roosevelt',
       starred: true,
       sex: 'male',
-      id: uuid(),
     },
     {
       name: 'Abraham Lincoln',
       starred: false,
       sex: 'male',
-      id: uuid(),
     },
     {
       name: 'George Washington',
       starred: false,
       sex: 'male',
-      id: uuid(),
     },
   ],
 };
 
-export default function friends(state = initialState, action) {
+export default function friends(state = { ...initialState }, action) {
   switch (action.type) {
     case ADD_FRIEND:
       return {
@@ -42,7 +38,6 @@ export default function friends(state = initialState, action) {
           ...state.friendsById,
           {
             name: action.name,
-            id: uuid(),
           },
         ],
       };
