@@ -1,0 +1,4 @@
+exports[`FriendList should match the snapshot 1`] = `
+<ul
+  className={undefined} />
+`;
