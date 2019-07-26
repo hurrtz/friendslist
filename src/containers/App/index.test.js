@@ -7,11 +7,6 @@ import App from './';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-const defaultProps = {
-  goBack: () => {},
-  goNext: () => {},
-};
-
 function setup() {
   const enzymeWrapper = mount(<App />);
 
