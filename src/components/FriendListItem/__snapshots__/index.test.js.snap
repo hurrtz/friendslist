@@ -1,0 +1,60 @@
+exports[`FriendListItem should match the snapshot 1`] = `
+<li
+  className={undefined}
+  onClick={[Function]}>
+  <div
+    className={undefined}>
+    <div
+      className={undefined}>
+      <div>
+        <span>
+          Name1
+        </span>
+      </div>
+      <div>
+        <small>
+          xx friends in common
+        </small>
+      </div>
+    </div>
+    <div
+      className={undefined}>
+      <button
+        className="btn btn-default"
+        onClick={[Function]}>
+        <i
+          className="fa fa-star" />
+      </button>
+      <button
+        className="btn btn-default"
+        onClick={[Function]}>
+        <i
+          className="fa fa-trash" />
+      </button>
+    </div>
+  </div>
+  <hr
+    className="undefined" />
+  <div
+    className="undefined">
+    <div
+      className="">
+      <small>
+        Sex:
+      </small>
+      <button
+        className="btn btn-default"
+        onClick={[Function]}>
+        <i
+          className="fa fa-mars" />
+      </button>
+      <button
+        className="btn btn-default"
+        onClick={[Function]}>
+        <i
+          className="fa fa-venus" />
+      </button>
+    </div>
+  </div>
+</li>
+`;
