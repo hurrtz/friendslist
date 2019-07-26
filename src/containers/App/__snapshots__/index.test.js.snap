@@ -1,0 +1,147 @@
+exports[`App should match the snapshot 1`] = `
+<div>
+  <div
+    className={undefined}>
+    <h1>
+      The FriendList
+    </h1>
+    <input
+      autoFocus="true"
+      className="form-control"
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder="Type the name of a friend"
+      type="text"
+      value="" />
+    <ul
+      className={undefined}>
+      <li
+        className={undefined}
+        onClick={[Function]}>
+        <div
+          className={undefined}>
+          <div
+            className={undefined}>
+            <div>
+              <span>
+                Theodore Roosevelt
+              </span>
+            </div>
+            <div>
+              <small>
+                xx friends in common
+              </small>
+            </div>
+          </div>
+          <div
+            className={undefined}>
+            <button
+              className="btn btn-default"
+              onClick={[Function]}>
+              <i
+                className="fa fa-star" />
+            </button>
+            <button
+              className="btn btn-default"
+              onClick={[Function]}>
+              <i
+                className="fa fa-trash" />
+            </button>
+          </div>
+        </div>
+        <hr
+          className="undefined" />
+        <div
+          className="undefined">
+          <div
+            className="">
+            <small>
+              Sex:
+            </small>
+            <button
+              className="btn btn-default undefined"
+              onClick={[Function]}>
+              <i
+                className="fa fa-mars" />
+            </button>
+            <button
+              className="btn btn-default"
+              onClick={[Function]}>
+              <i
+                className="fa fa-venus" />
+            </button>
+          </div>
+        </div>
+      </li>
+      <li
+        className={undefined}
+        onClick={[Function]}>
+        <div
+          className={undefined}>
+          <div
+            className={undefined}>
+            <div>
+              <span>
+                Abraham Lincoln
+              </span>
+            </div>
+            <div>
+              <small>
+                xx friends in common
+              </small>
+            </div>
+          </div>
+          <div
+            className={undefined}>
+            <button
+              className="btn btn-default"
+              onClick={[Function]}>
+              <i
+                className="fa fa-star-o" />
+            </button>
+            <button
+              className="btn btn-default"
+              onClick={[Function]}>
+              <i
+                className="fa fa-trash" />
+            </button>
+          </div>
+        </div>
+        <hr
+          className="undefined" />
+        <div
+          className="undefined">
+          <div
+            className="">
+            <small>
+              Sex:
+            </small>
+            <button
+              className="btn btn-default undefined"
+              onClick={[Function]}>
+              <i
+                className="fa fa-mars" />
+            </button>
+            <button
+              className="btn btn-default"
+              onClick={[Function]}>
+              <i
+                className="fa fa-venus" />
+            </button>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div
+      className={undefined}>
+      <div />
+      <button
+        className="btn bnt-default"
+        onClick={[Function]}
+        type="button">
+        Next
+      </button>
+    </div>
+  </div>
+</div>
+`;
