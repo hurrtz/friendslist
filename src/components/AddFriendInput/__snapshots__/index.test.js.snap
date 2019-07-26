@@ -1,0 +1,10 @@
+exports[`AddFriendInput should match the snapshot 1`] = `
+<input
+  autoFocus="true"
+  className="form-control"
+  onChange={[Function]}
+  onKeyDown={[Function]}
+  placeholder="Type the name of a friend"
+  type="text"
+  value="" />
+`;
