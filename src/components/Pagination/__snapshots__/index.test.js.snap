@@ -1,0 +1,17 @@
+exports[`Pagination should match the snapshot 1`] = `
+<div
+  className={undefined}>
+  <button
+    className="btn bnt-default"
+    onClick={[Function]}
+    type="button">
+    Back
+  </button>
+  <button
+    className="btn bnt-default"
+    onClick={[Function]}
+    type="button">
+    Next
+  </button>
+</div>
+`;
